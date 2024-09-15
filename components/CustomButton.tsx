@@ -46,9 +46,11 @@ const CustomButton = ({
       onPress={onPress}
       className={`${isWelcome ? "w-11/12" : "w-full"} rounded-full p-3 flex flex-row justify-center items-center shadow-md shadow-neutral-400/70 ${getBgVariantStyle(bgVariant)} ${buttonStyle}`}
     >
+      {IconLeft && <IconLeft />}
       <Text className={`text-lg font-bold ${getTextVariantStyle(textVariant)}`}>
         {title}
       </Text>
+      {IconRight && <IconRight />}
     </TouchableOpacity>
   );
 };
